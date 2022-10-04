@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/links.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="autotyping.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <title>Clara Lam's Portfolio</title>
+</head>
+<body class="font-raleway bg-almostWhite">
+    <!-- Navbar -->
+    <nav class="relative container mx-auto px-6 py-6">
+        <!-- Flex Container -->
+        <div class="flex items-center justify-between">
+            <!-- Home Button -->
+            <div class="text-2xl pt-2 link link--elara">Clara Lam</div>
+            <!-- Navbar Items -->
+            <ul class="hidden space-x-12 text-lg md:flex">
+                <li>
+                    <a href="#workSection" class="hover:text-mutedPink link link--metis">Work</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-mutedPink link link--metis">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-mutedPink link link--metis">Resume</a>
+                </li>
+            </ul>
+            <!-- Hamburger Menu -->
+            <div id="hamburger" class="space-y-1 md:hidden -z-10">
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+            </div>
+            <!-- Navbar Items for Hamburger -->
+            <ul id="menu" class="hidden bg-indigo-700 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                <li class="hover:text-mutedPink">
+                    <a href="#">Work</a>
+                </li>
+                <li class="hover:text-mutedPink">
+                    <a href="#">About</a>
+                </li>
+                <li class="hover:text-mutedPink">
+                    <a href="#" class="hover:text-mutedPink">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Banner -->
+    <section id="banner" class="lg:my-24">
+        <!-- Flex Container -->
+        <div class="container flex flex-col items-center px-8 my-auto mx-auto mt-10 md:px-48 md:space-x-3 md:flex-row">
+            <!-- Description -->
+            <div class="flex flex-col relative mb-12 space-y-8 lg:mb-0 md:w-1/2">
+                <!-- Autotyped words -->
+                <div class="flex py-5 space-x-2">
+                    <span class="text-xl font-semibold md:text-4xl">I'm</span>
+                    <p id="autotypedText" class="text-xl font-semibold text-mutedPink md:text-4xl"></p>
+                </div>
+                <!-- Short bio -->
+                <div class="space-y-5 font-nunitosans">
+                    <p class="text-xl lg:text-2xl text-left">
+                        Hi! I'm Clara, a current junior at Carnegie Mellon Univeristy studying Information Systems. I'm also minoring in Human-Computer Interaction and Business Analytics & Optimization!</p>
+                    <p class="text-xl lg:text-2xl text-left">
+                        When designing and developing technological solutions, I do my best to advocate for the user :)
+                    </p>
+                </div>
+            </div>
+            <div class="flex md:w-1/2">
+                <img src="img/pfp.jpg" alt="Image of Clara Lam" class="w-80 mx-auto rounded-full border-4 border-solid border-lightPink">
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Work Experience -->
+    <section id="workSection" class="lg:my-24">
+        <!-- Section heading/text -->
+        <div class="container flex flex-col px-8 mx-auto mt-10 md:px-48">
+            <h1 class="text-mutedPink font-bold text-4xl">Works</h1>
+        </div>
+
+        <!-- Buttons to filter works -->
+        <div class="container flex mx-auto space-x-4 mt-10 items-center md:px-48">
+            <p class="font-semibold">Filter:</p>
+            <button class="bg-lightPink py-2 px-4 rounded-full" onclick="showAll(this)">All</button>
+            <button class="bg-lightPink py-2 px-4 rounded-full" onclick="showDevelopment(this)">Development</button>
+            <button class="bg-lightPink py-2 px-4 rounded-full" onclick="showDesign(this)">Design</button>
+        </div>
+
+        <!-- Cards -->
+        <div class="container flex mx-auto md:px-48 p-5 sm:p-0 flex-wrap justify-between">
+
+            <!-- Confirmed -->
+            <div class="design w-full flex flex-col shadow-xl rounded-lg p-10 my-3 gap-3 bg-white md:flex-row md:my-10">
+                <div class="flex flex-col relative mb-12 space-y-6 lg:mb-0 md:w-3/5">
+                    <h1 class="text-3xl font-semibold">Confirmed</h1>
+                    <p>May 2022 - Jul 2022</p>
+                    <p>2022 Summer Internship where I worked at a Pittsburgh startup specializing in productivity tools. I mostly worked on their scheduling tool, known as Flex Cals and Custom Meeting Requests.</p>
+                    <ul class="list-disc list-outside ml-4 space-y-2">
+                        <li>Redesigned external invitation page of main product: Flex Cals</li>
+                        <li>Consolidated two products to make scheduling experience efficient and seamless</li>
+                        <li>Created brand guidelines (logo, color palette, typography, design elements)</li>
+                    </ul>
+                    <p>Web design, Prototyping, Human-centered design</p>
+                </div>
+                <div class="flex md:w-2/5">       
+                    <img src="img/confirmed_mockup.png" alt="Mockup of Redesigned Participant View for Confirmed" class="object-contain">
+                </div>
+            </div>
+
+            <!-- CMU XHacks: RightOvers -->
+            <div class="design w-full flex flex-col shadow-xl rounded-lg p-10 my-3 gap-3 bg-white md:my-10 md:flex-row">
+                <div class="flex flex-col relative mb-12 space-y-6 lg:mb-0 md:w-3/5">
+                    <h1 class="text-3xl font-semibold">CMU XHacks: RightOvers</h1>
+                    <p>Apr 2022</p>
+                    <p>I participated in a 3-day design hackathon where I, in a team of 4, prototyped RightOvers, a mobile app that increases accessibility to food while reducing food waste. We won the "Vibiest Figma Workspace" award!</p>
+                    <ul class="list-disc list-outside ml-4 space-y-2">
+                        <li>Ideated, created high-fidelity prototypes, and prepared pitch within a 12-hour time frame</li>
+                        <li>Pitched idea and business model to a panel of 5 judges, consisting of professors and researchers at CMU</li>
+                        <li>Made finalists and won a 🔥Spicy award</li>
+                    </ul>
+                    <p>Mobile app design, Accessibility, Prototyping, Stakeholder analysis, Pitching</p>
+                </div>
+                <div class="flex md:h-4/5 md:w-2/5">       
+                    <img src="img/rightovers_mockup.png" alt="Mockup of RightOvers mobile app" class="object-contain mx-auto">
+                </div>
+            </div>
+
+            <!-- GPBO -->
+            <div class="development w-full flex flex-col shadow-xl rounded-lg p-10 my-3 gap-3 bg-white md:my-10 md:flex-row">
+                <div class="flex flex-col relative mb-12 space-y-6 lg:mb-0 md:w-3/5">
+                    <h1 class="text-3xl font-semibold">Great Pittsburgh Baking Outlet</h1>
+                    <p>Jan 2022 - May 2022</p>
+                    <p>A Ruby on Rails web application built for an e-commerce baking supply business. The application is fully functioning and guests, customers with accounts, and business admins can use it, with different permissions for each role.</p>
+                    <ul class="list-disc list-outside ml-4 space-y-2">
+                        <li>Built Model scopes, relationships, and methods, Controller permissions, and View partials</li>
+                        <li>Wrote unit tests to ensure 100% test coverage</li>
+                        <li>Examined business model and stakeholder needs to write use cases that guided development process</li>
+                    </ul>
+                    <p>Model-View-Controller architecture, Web development, Full-stack development, Ruby on Rails, RESTful APIs</p>
+                </div>
+                <div class="flex md:w-2/5">       
+                    <img src="img/gpbo_mockup.png" alt="Mockup of Great Pittsburgh Baking Outlet" class="object-contain">
+                </div>
+            </div>
+
+            <!-- Peerdea -->
+            <div class="design development w-full flex flex-col shadow-xl rounded-lg p-10 my-3 gap-3 bg-white md:my-10 md:flex-row">
+                <div class="flex flex-col relative mb-12 space-y-6 lg:mb-0 md:w-3/5">
+                    <h1 class="text-3xl font-semibold">Peerdea & Cheerpeer</h1>
+                    <p>Oct 2021 - Jun 2022</p>
+                    <p>A native application, developed for research, that allows creative entrepreneurs to exchange feedback through group posts. I worked as a technical and design research assistant.</p>
+                    <ul class="list-disc list-outside ml-4 space-y-2">
+                        <li>Implemented post prioritization, where older posts with low engagement are displayed to users first</li>
+                        <li>Led implementation of accessibility guidelines for Peerdea, including researching and outlining guidelines to delegating and programming best practices</li>
+                        <li>Designed and developed landing page of Cheerpeer, a rebranding of Peerdea, to inform users about the app</li>
+                    </ul>
+                    <p>Mobile app development, Visual accessibility, UX Research, React Native, Expo</p>
+                </div>
+                <div class="flex md:w-2/5">       
+                    <img src="img/peerdea_mockup.png" alt="Mockup of Peerdea" class="object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section class="lg:my-24">
+        <!-- Section heading/text -->
+        <div class="container flex flex-col px-8 mx-auto mt-10 md:px-48">
+            <h1 class="text-mutedPink font-bold text-4xl">Let's Get in Touch!</h1>
+        </div>
+
+        <div class="container flex flex-col mx-auto mt-10 md:px-48">
+            <p>I would love to chat more!</p>
+            <p>You can reach me at my email and LinkedIn:</p>
+        </div>
+
+        <div class="container flex mx-auto mt-5 space-x-4 md:px-48">
+            <p class="group flex py-2 px-4 rounded-full border-solid border-2 border-mutedPink items-center hover:bg-mutedPink hover:text-white">
+                <ion-icon class="mr-2 fill-mutedPink group-hover:fill-white" name="mail" alt="Clara's email: claralam@andrew.cmu.edu"></ion-icon>claralam@andrew.cmu.edu
+            </p>
+            <a href="https://www.linkedin.com/in/claralam19/" target="_blank" class="group flex py-2 px-4 rounded-full border-solid border-2 border-mutedPink items-center hover:bg-mutedPink hover:text-white">
+                <ion-icon class="mr-2 fill-mutedPink group-hover:fill-white" name="logo-linkedin"></ion-icon> LinkedIn
+            </a>
+        </div>
+
+        <div class="container flex mx-auto mt-10 md:px-48">
+            <p>And check out my work on Github:</p>
+        </div>
+
+        <div class="container flex mx-auto mt-5 space-x-4 md:px-48">
+            <a href="https://github.com/claralam" target="_blank" class="group flex py-2 px-4 rounded-full border-solid border-2 border-mutedPink items-center hover:bg-mutedPink hover:text-white">
+                <ion-icon class="mr-2 fill-mutedPink group-hover:fill-white" name="logo-github" alt="Clara's Github"></ion-icon> Github
+            </a>
+        </div>
+    </section>
+
+    <section class="container flex flex-col items-center px-8 mx-auto mt-10 space-x-5 md:px-48 lg:my-24">
+        <p>Designed and coded from scratch</p>
+        <p>Clara Lam &copy; 2022</p>
+    </section>
+</body>
+</html>
