@@ -188,7 +188,7 @@ a:focus-visible {
 
 .link--metis {
     /* font-family: bely-display, sans-serif; */
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .link--metis::before {

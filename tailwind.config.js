@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         lightPink: '#F8D0CE',
         mutedPink: '#D57A7D',
-        almostWhite: '#FFFCFA'
+        almostWhite: '#FFFCFF'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],

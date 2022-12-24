@@ -9,7 +9,7 @@ $(document).ready( function() {
     })
 
     // Autotyping on home screen
-    const autotypedText = ['a developer', 'a designer', 'a food enthusiast', 'Clara'];
+    const autotypedText = ['Clara', 'a developer', 'a designer', 'a food enthusiast'];
     const typing = new AutoTyping('#autotypedText', autotypedText, {
         typeSpeed: 100,
         deleteSpeed: 100,
