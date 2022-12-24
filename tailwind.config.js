@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./docs/**/*.{html,js}"],
+  content: [
+    "./docs/**/*.{html, js}",
+    "./*.{html, js}"
+  ],
   theme: {
     extend: {
       screens: {
@@ -9,7 +12,7 @@ module.exports = {
       colors: {
         lightPink: '#F8D0CE',
         mutedPink: '#D57A7D',
-        almostWhite: '#FFFCFA'
+        almostWhite: '#FFFCFF'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
