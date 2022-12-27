@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Template page for an individual project page -->
+<!-- Change color based on the project? -->
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -28,12 +30,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="docs/autotyping.js"></script>
     <script type="text/javascript" src="docs/app.js"></script>
 
     <title>Clara Lam's Portfolio</title>
 </head>
-<body class="font-raleway bg-almostWhite">
+<body class="project-page font-raleway bg-almostWhite">
     <div class="relative bg-slate-200 lg:h-screen">
         <div>
             <!-- Navbar -->
@@ -45,7 +46,7 @@
                     <!-- Navbar Items -->
                     <ul class="hidden space-x-12 text-lg md:flex">
                         <li>
-                            <a href="#workSection" class="hover:text-mutedPink link link--metis">Work</a>
+                            <a href="index.html#workSection" class="hover:text-mutedPink link link--metis">Work</a>
                         </li>
                         <li>
                             <a href="about.html" class="hover:text-mutedPink link link--metis">About</a>
@@ -109,21 +110,29 @@
             </div>
         </section>
         <!-- Down arrow to content -->
-        <a href="#overview" class="absolute inset-x-0 bottom-16 container flex my-auto mx-auto mt-52 justify-center text-black md:px-48 md:flex-row">
-            <ion-icon class="h-14 w-14" name="chevron-down-circle-outline"></ion-icon>
+        <a href="#overview" class="absolute inset-x-0 bottom-16 container flex my-auto mx-auto mt-52 justify-center text-black animate-bounce md:px-48 md:flex-row">
+            <ion-icon class="h-14 w-14 hover:text-mutedPink" name="chevron-down-circle-outline" style="--ionicon-stroke-width: 22px;"></ion-icon>
         </a>
     </div>
 
     <!-- Main Content -->
     <div class="relative container flex px-4 mx-auto mt-10 md:px-48">
+        
         <!-- Left side table of contents -->
         <section class="invisible lg:visible lg:w-1/6 lg:mr-10 lg:border-r-2 lg:border-lightPink">
-            <ul class="text-xl uppercase my-24 space-y-5">
-                <li>Overview</li>
-                <li>Process</li>
-                <li>Takeaways</li>
+            <ul class="sticky self-start top-20 text-xl uppercase my-24 space-y-5">
+                <li>
+                    <a href="#overview" class="text-black">Overview</a>
+                </li>
+                <li>
+                    <a href="#process" class="text-black">Process</a>
+                </li>
+                <li>
+                    <a href="#takeaways" class="text-black">Takeaways</a>
+                </li>
             </ul>
         </section>
+
         <!-- Content on the right -->
         <div class="lg:pl-10 lg:w-5/6">
             <!-- Overview Section -->
@@ -131,11 +140,11 @@
                 <h1 class="text-mutedPink font-bold text-4xl">Overview</h1>
             </section>
 
-            <section class="my-24">
+            <section id="process" class="my-24">
                 <h1 class="text-mutedPink font-bold text-4xl">Process</h1>
             </section>
 
-            <section class="my-24">
+            <section id="takeaways" class="my-24">
                 <h1 class="text-mutedPink font-bold text-4xl">Takeaways</h1>
             </section>
         </div>

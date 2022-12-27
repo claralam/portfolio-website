@@ -1,6 +1,5 @@
 $(document).ready( function() {
     // Show and hide navbar with hamburger
-
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu")
 
@@ -8,17 +7,38 @@ $(document).ready( function() {
         menu.classList.toggle("hidden")
     })
 
-    // Autotyping on home screen
-    const autotypedText = ['Clara', 'a developer', 'a designer', 'a food enthusiast'];
-    const typing = new AutoTyping('#autotypedText', autotypedText, {
-        typeSpeed: 100,
-        deleteSpeed: 100,
-        waitBeforeDelete: 2000,
-        waitBetweenWords: 500,
-    });
+    if ($('body').is('.home-page')) {
+        // Autotyping on home page
+        const autotypedText = ['Clara', 'a developer', 'a designer', 'a food enthusiast'];
+        const typing = new AutoTyping('#autotypedText', autotypedText, {
+            typeSpeed: 100,
+            deleteSpeed: 100,
+            waitBeforeDelete: 2000,
+            waitBetweenWords: 500,
+        });
 
-    typing.start();
-
+        typing.start();
+    } else if ($('body').is('.project-page')) {
+        // Individual Project Page Table of Contents Scroll
+        // https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            if (entry.intersectionRatio > 0) {
+                document.querySelector(`li a[href="#${id}"]`).classList.remove('text-black');
+                document.querySelector(`li a[href="#${id}"]`).classList.add('font-extrabold', 'text-mutedPink');
+            } else {
+                document.querySelector(`li a[href="#${id}"]`).classList.remove('font-extrabold', 'text-mutedPink');
+                document.querySelector(`li a[href="#${id}"]`).classList.add('text-black');
+            }
+            });
+        });
+        
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    }
 });
 
 // Sets all cards style.display to 'none'
